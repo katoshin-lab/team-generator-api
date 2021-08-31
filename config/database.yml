@@ -13,9 +13,9 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: testuser
+  username: <%= ENV['TEAM_GENERATOR_API_DATABASE_USER_NAME'] %>
   password: <%= ENV['TEAM_GENERATOR_API_DATABASE_PASSWORD'] %>
-  host: localhost
+  host: <%= ENV['TEAM_GENERATOR_API_DATABASE_HOST'] %>
 
 development:
   <<: *default
