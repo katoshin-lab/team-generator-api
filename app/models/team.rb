@@ -1,5 +1,5 @@
 class Team < ApplicationRecord
-  include Tag::TaggableResources
+  include Tag::Resources
 
   belongs_to :user
   has_many :team_members
